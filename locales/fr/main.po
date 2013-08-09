@@ -1,14 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Franck Paul <carnet.franck.paul@gmail.com>\n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+
+msgid "Collapse/Expand post's attributes sidebar"
+msgstr "Masque/Affiche la colonne d'options du billet en cours d'édition"
 
 msgid "Show Options"
 msgstr "Afficher les options"
