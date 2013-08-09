@@ -1,0 +1,5 @@
+msgid "Show Options"
+msgstr "Afficher les options"
+
+msgid "Hide Options"
+msgstr "Cacher les options"
