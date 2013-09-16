@@ -9,7 +9,7 @@ var toWide = function() {
 };
 
 var toNormal = function() {
-		$('#entry-content').css('margin-right','220px');
+		$('#entry-content').css('margin-right','240px');
 		$('#entry-sidebar').css('display','block');
 		$('.jstEditor iframe').width($('.area').width()-7);
 
@@ -22,10 +22,10 @@ var wideSwitch = function() {
 	if (this.wide == true) {
 		toNormal();
 		// Move date picker to it's right place
-		$('#post_dt + img').css("left",$('#post_dt').width()+3);
+		$('#post_dt + img').css("left",$('#post_dt').width()+10);
 		// Reset URL and lock to their right attributes
-		$('#post_url').css("width",$('#post_url').parents('label').width()-15);
-		$('#post_url + img').css("left",$('#post_url').parents('label').width()-10);
+		$('#post_url').css("width",$('#post_url').parent().width()-16);
+		$('#post_url + img').css("left",$('#post_url').parent().width()-4);
 		this.wide = false;
 	} else {
 		toWide();
