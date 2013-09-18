@@ -36,17 +36,20 @@ var wideSwitch = function() {
 }
 
 $(document).ready(function() {
-	$('#entry-form').prepend('<a href="#" id="wide" style="float:right; border-bottom: 0;" title="'+dotclear.msg.wideEditHide+'"> </a><br class="clear" />');
+	$('#entry-form').prepend('<a href="#" id="wide" style="float:right; border-bottom: 0;" title="'+
+		dotclear.msg.wideEditHide+'"> </a><br class="clear" />');
+
 	if ($.cookie('dcx_wideEdit') == null) {
 		$.cookie('dcx_wideEdit','false',{expires: 30});
 	}
 
 	if ($.cookie('dcx_wideEdit') == 'true') {
-		document.getElementById('wide').wide = true;
+		$('#wide').wide = true;
 		toWide();
 	} else {
-		document.getElementById('wide').wide = false;
+		$('#wide').wide = false;
 		toNormal();
 	}
+
 	$('#wide').click(wideSwitch);
 });
