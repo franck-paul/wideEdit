@@ -1,11 +1,23 @@
 msgid ""
 msgstr ""
-
-msgid "Collapse/Expand post's attributes sidebar"
-msgstr "Masque/Affiche la colonne d'options du billet en cours d'édition"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-18 16:28+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Franck Paul <carnet.franck.paul@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.5.7\n"
 
 msgid "Show Options"
 msgstr "Afficher les options"
 
 msgid "Hide Options"
 msgstr "Cacher les options"
+
+#~ msgid "Collapse/Expand post's attributes sidebar"
+#~ msgstr "Masque/Affiche la colonne d'options du billet en cours d'dition"
