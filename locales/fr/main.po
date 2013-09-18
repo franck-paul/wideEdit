@@ -19,5 +19,5 @@ msgstr "Afficher les options"
 msgid "Hide Options"
 msgstr "Cacher les options"
 
-#~ msgid "Collapse/Expand post's attributes sidebar"
-#~ msgstr "Masque/Affiche la colonne d'options du billet en cours d'dition"
+msgid "Collapse/Expand post's attributes sidebar"
+msgstr "Masque/Affiche la colonne d'options du billet en cours d'dition"
