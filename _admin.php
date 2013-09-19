@@ -14,6 +14,9 @@
 
 if (!defined('DC_CONTEXT_ADMIN')) { return; }
 
+/* Name */			__('wideEdit');
+/* Description*/	__('Collapse/Expand post\'s attributes sidebar');
+
 $core->addBehavior('adminPostHeaders',array('wideEditBehaviors','jsLoad'));
 $core->addBehavior('adminPageHeaders',array('wideEditBehaviors','jsLoad'));
 $core->addBehavior('adminRelatedHeaders',array('wideEditBehaviors','jsLoad'));
