@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-19 07:50+0200\n"
+"POT-Creation-Date: 2013-09-24 13:23+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Franck Paul <carnet.franck.paul@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.5.7\n"
 
-msgid "wideEdit"
-msgstr ""
-
 msgid "Collapse/Expand post's attributes sidebar"
 msgstr "Masque/Affiche la colonne d'options du billet en cours d'dition"
+
+msgid "wideEdit"
+msgstr ""
 
 msgid "Show Options"
 msgstr "Afficher les options"
