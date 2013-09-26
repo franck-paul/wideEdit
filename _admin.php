@@ -26,7 +26,7 @@ class wideEditBehaviors
 	public static function jsLoad()
 	{
 		return
-		'<script type="text/javascript" src="index.php?pf=wideEdit/post.js"></script>'.
+		'<script type="text/javascript" src="index.php?pf=wideEdit/js/post.js"></script>'.
 		'<script type="text/javascript">'."\n".
 		"//<![CDATA[\n".
 		dcPage::jsVar('dotclear.msg.wideEditShow',__('Show Options')).
@@ -35,4 +35,3 @@ class wideEditBehaviors
 		"</script>\n";
 	}
 }
-?>
