@@ -9,7 +9,7 @@ var toWide = function() {
 };
 
 var toNormal = function() {
-		$('#entry-content').css('margin-right','240px');
+		$('#entry-content').css('margin-right','18em');
 		$('#entry-sidebar').css('display','block');
 		$('.jstEditor iframe').width($('.area').width()-7);
 
