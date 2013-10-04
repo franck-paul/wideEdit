@@ -19,6 +19,9 @@ $this->registerModule(
 	/* Description*/		"Collapse/Expand post's attributes sidebar",
 	/* Author */			"Franck Paul & Alain Vagner",
 	/* Version */			'0.5',
-	/* Permissions */		'usage,contentadmin',
-	/* Priority */			10
+	array(
+		/* Permissions */	'permissions' =>	'usage,contentadmin',
+		/* Type */			'type' =>			'plugin',
+		/* Priority */		'priority' => 		10
+	)
 );
