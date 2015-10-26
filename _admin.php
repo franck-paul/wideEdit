@@ -25,8 +25,10 @@ class wideEditBehaviors
 {
 	public static function jsLoad()
 	{
+		global $core;
+
 		return
-		'<script type="text/javascript" src="index.php?pf=wideEdit/js/post.js"></script>'.
+		dcPage::jsLoad(urldecode(dcPage::getPF('wideEdit/js/post.js')),$core->getVersion('wideEdit')).
 		'<script type="text/javascript">'."\n".
 		"//<![CDATA[\n".
 		dcPage::jsVar('dotclear.msg.wideEditShow',__('Show Options')).
