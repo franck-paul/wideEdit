@@ -1,39 +1,39 @@
 <?php
-# -- BEGIN LICENSE BLOCK ----------------------------------
-# This file is part of wideEdit, a plugin for Dotclear 2.
-#
-# Copyright (c) Franck Paul and Alain Vagner
-# carnet.franck.paul@gmail.com
-#
-# Icon from Faenza set by tiheum (http://tiheum.deviantart.com/art/Faenza-Icons-173323228)
-#
-# Licensed under the GPL version 2.0 license.
-# A copy of this license is available in LICENSE file or at
-# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-# -- END LICENSE BLOCK ------------------------------------
+/**
+ * @brief wideEdit, a plugin for Dotclear 2
+ *
+ * @package Dotclear
+ * @subpackage Plugins
+ *
+ * @author Franck Paul
+ * @author Alain Vagner
+ *
+ * @copyright Franck Paul carnet.franck.paul@gmail.com
+ * @copyright GPL-2.0 https://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Icon from Faenza set by tiheum (http://tiheum.deviantart.com/art/Faenza-Icons-173323228)
+ */
 
-if (!defined('DC_CONTEXT_ADMIN')) { return; }
+if (!defined('DC_CONTEXT_ADMIN')) {return;}
 
 // dead but useful code, in order to have translations
-__('wideEdit').__('Collapse/Expand post\'s attributes sidebar');
+__('wideEdit') . __('Collapse/Expand post\'s attributes sidebar');
 
-$core->addBehavior('adminPostHeaders',array('wideEditBehaviors','jsLoad'));
-$core->addBehavior('adminPageHeaders',array('wideEditBehaviors','jsLoad'));
-$core->addBehavior('adminRelatedHeaders',array('wideEditBehaviors','jsLoad'));
+$core->addBehavior('adminPostHeaders', array('wideEditBehaviors', 'jsLoad'));
+$core->addBehavior('adminPageHeaders', array('wideEditBehaviors', 'jsLoad'));
+$core->addBehavior('adminRelatedHeaders', array('wideEditBehaviors', 'jsLoad'));
 
 class wideEditBehaviors
 {
-	public static function jsLoad()
-	{
-		global $core;
+    public static function jsLoad()
+    {
+        global $core;
 
-		return
-		dcPage::jsLoad(urldecode(dcPage::getPF('wideEdit/js/post.js')),$core->getVersion('wideEdit')).
-		'<script type="text/javascript">'."\n".
-		"//<![CDATA[\n".
-		dcPage::jsVar('dotclear.msg.wideEditShow',__('Show Options')).
-		dcPage::jsVar('dotclear.msg.wideEditHide',__('Hide Options')).
-		"\n//]]>\n".
-		"</script>\n";
-	}
+        return
+        dcPage::jsLoad(urldecode(dcPage::getPF('wideEdit/js/post.js')), $core->getVersion('wideEdit')) .
+        '<script type="text/javascript">' . "\n" .
+        dcPage::jsVar('dotclear.msg.wideEditShow', __('Show Options')) .
+        dcPage::jsVar('dotclear.msg.wideEditHide', __('Hide Options')) .
+            "</script>\n";
+    }
 }
