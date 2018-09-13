@@ -19,9 +19,9 @@ if (!defined('DC_CONTEXT_ADMIN')) {return;}
 // dead but useful code, in order to have translations
 __('wideEdit') . __('Collapse/Expand post\'s attributes sidebar');
 
-$core->addBehavior('adminPostHeaders', array('wideEditBehaviors', 'jsLoad'));
-$core->addBehavior('adminPageHeaders', array('wideEditBehaviors', 'jsLoad'));
-$core->addBehavior('adminRelatedHeaders', array('wideEditBehaviors', 'jsLoad'));
+$core->addBehavior('adminPostHeaders', ['wideEditBehaviors', 'jsLoad']);
+$core->addBehavior('adminPageHeaders', ['wideEditBehaviors', 'jsLoad']);
+$core->addBehavior('adminRelatedHeaders', ['wideEditBehaviors', 'jsLoad']);
 
 class wideEditBehaviors
 {

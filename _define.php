@@ -20,10 +20,11 @@ $this->registerModule(
     "wideEdit",                                  // Name
     "Collapse/Expand post's attributes sidebar", // Description
     "Franck Paul & Alain Vagner",                // Author
-    '0.5',                                       // Version
-    array(
+    '0.6',                                       // Version
+    [
+        'requires'    => [['core', '2.13']],   // Dependencies
         'permissions' => 'usage,contentadmin', // Permissions
         'type'        => 'plugin',             // Type
         'priority'    => 10                   // Priority
-    )
+    ]
 );
