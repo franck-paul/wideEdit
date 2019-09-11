@@ -1,27 +1,27 @@
 /*global $, dotclear */
 'use strict';
 
-var toWide = function() {
+const toWide = function() {
   $('#entry-sidebar').css('display', 'none');
   $('#entry-content').css('margin-right', 0);
   $('.jstEditor iframe').width($('.area').width() - 7);
 
   $('#wide').empty();
-  $('#wide').append('<img src="images/menu_off.png" alt="' + dotclear.msg.wideEditShow + '" />');
+  $('#wide').append(`<img src="images/menu_off.png" alt="${dotclear.msg.wideEditShow}" />`);
   $('#wide').attr('title', dotclear.msg.wideEditShow);
 };
 
-var toNormal = function() {
+const toNormal = function() {
   $('#entry-content').css('margin-right', '18em');
   $('#entry-sidebar').css('display', 'block');
   $('.jstEditor iframe').width($('.area').width() - 7);
 
   $('#wide').empty();
-  $('#wide').append('<img src="images/menu_on.png" alt="' + dotclear.msg.wideEditHide + '" />');
+  $('#wide').append(`<img src="images/menu_on.png" alt="${dotclear.msg.wideEditHide}" />`);
   $('#wide').attr('title', dotclear.msg.wideEditHide);
 };
 
-var wideSwitch = function() {
+const wideSwitch = function() {
   if (this.wide == true) {
     toNormal();
     // Move date picker to it's right place
@@ -39,8 +39,9 @@ var wideSwitch = function() {
 };
 
 $(document).ready(function() {
-  $('#entry-form').prepend('<a href="#" id="wide" style="float:right; border-bottom: 0;" title="' +
-    dotclear.msg.wideEditHide + '"> </a><br class="clear" />');
+  $('#entry-form').prepend(
+    `<a href="#" id="wide" style="float:right; border-bottom: 0;" title="${dotclear.msg.wideEditHide}"> </a><br class="clear" />`
+  );
 
   if ($.cookie('dcx_wideEdit') == null) {
     $.cookie('dcx_wideEdit', 'false', {
