@@ -1,10 +1,8 @@
-/*global $, dotclear */
+/*global $, dotclear, mergeDeep, getData */
 'use strict';
 
 const toWide = function() {
   $('#entry-sidebar').css('display', 'none');
-  $('#entry-content').css('margin-right', 0);
-  $('.jstEditor iframe').width($('.area').width() - 7);
 
   $('#wide').empty();
   $('#wide').append(`<img src="images/menu_off.png" alt="${dotclear.msg.wideEditShow}" />`);
@@ -12,9 +10,7 @@ const toWide = function() {
 };
 
 const toNormal = function() {
-  $('#entry-content').css('margin-right', '18em');
-  $('#entry-sidebar').css('display', 'block');
-  $('.jstEditor iframe').width($('.area').width() - 7);
+  $('#entry-sidebar').css('display', 'flex');
 
   $('#wide').empty();
   $('#wide').append(`<img src="images/menu_on.png" alt="${dotclear.msg.wideEditHide}" />`);
@@ -24,32 +20,32 @@ const toNormal = function() {
 const wideSwitch = function() {
   if (this.wide == true) {
     toNormal();
-    // Move date picker to it's right place
-    $('#post_dt + img').css('left', $('#post_dt').width() + 10);
-    // Reset URL and lock to their right attributes
-    $('#post_url').css('width', $('#post_url').parent().width() - 16);
-    $('#post_url + img').css('left', $('#post_url').parent().width() - 4);
     this.wide = false;
   } else {
     toWide();
     this.wide = true;
   }
-  $.cookie('dcx_wideEdit', this.wide ? 'true' : 'false');
+  $.cookie('wideEdit', this.wide ? 'true' : 'false');
   return false;
 };
 
 $(document).ready(function() {
-  $('#entry-form').prepend(
-    `<a href="#" id="wide" style="float:right; border-bottom: 0;" title="${dotclear.msg.wideEditHide}"> </a><br class="clear" />`
+
+  mergeDeep(dotclear, getData('wide_edit'));
+
+  $('#entry-content').css('width', 'auto');
+
+  $('#entry-sidebar').before(
+    `<a href="#" id="wide" style="border-bottom: 0; margin-right: .5em;" title="${dotclear.msg.wideEditHide}"> </a>`
   );
 
-  if ($.cookie('dcx_wideEdit') == null) {
-    $.cookie('dcx_wideEdit', 'false', {
+  if ($.cookie('wideEdit') == null) {
+    $.cookie('wideEdit', 'false', {
       expires: 30
     });
   }
 
-  if ($.cookie('dcx_wideEdit') == 'true') {
+  if ($.cookie('wideEdit') == 'true') {
     $('#wide').wide = true;
     toWide();
   } else {
@@ -57,5 +53,5 @@ $(document).ready(function() {
     toNormal();
   }
 
-  $('#wide').click(wideSwitch);
+  $('#wide').on('click', wideSwitch);
 });

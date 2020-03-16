@@ -30,10 +30,12 @@ class wideEditBehaviors
         global $core;
 
         return
-        dcPage::jsLoad(urldecode(dcPage::getPF('wideEdit/js/post.js')), $core->getVersion('wideEdit')) .
-        '<script type="text/javascript">' . "\n" .
-        dcPage::jsVar('dotclear.msg.wideEditShow', __('Show Options')) .
-        dcPage::jsVar('dotclear.msg.wideEditHide', __('Hide Options')) .
-            "</script>\n";
+        dcPage::jsJson('wide_edit', [
+            'msg' => [
+                'wideEditShow' => __('Show Options'),
+                'wideEditHide' => __('Hide Options')
+            ]
+        ]) .
+        dcPage::jsLoad(urldecode(dcPage::getPF('wideEdit/js/post.js')), $core->getVersion('wideEdit'));
     }
 }

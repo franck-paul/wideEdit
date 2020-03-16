@@ -22,9 +22,11 @@ $this->registerModule(
     "Franck Paul & Alain Vagner",                // Author
     '0.6',                                       // Version
     [
-        'requires'    => [['core', '2.13']],   // Dependencies
-        'permissions' => 'usage,contentadmin', // Permissions
-        'type'        => 'plugin',             // Type
-        'priority'    => 10                   // Priority
+        'requires'    => [['core', '2.16']],                        // Dependencies
+        'permissions' => 'usage,contentadmin',                      // Permissions
+        'type'        => 'plugin',                                  // Type
+        'priority'    => 10,                                        // Priority
+        'details'     => 'https://open-time.net/?q=wideEdit',       // Details URL
+        'support'     => 'https://github.com/franck-paul/wideEdit' // Support URL
     ]
 );
