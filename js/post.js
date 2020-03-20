@@ -33,7 +33,7 @@ $(document).ready(function() {
 
   mergeDeep(dotclear, getData('wide_edit'));
 
-  $('#entry-content').css('width', 'auto');
+  $('#entry-wrapper').css('width', 'auto');
 
   $('#entry-sidebar').before(
     `<a href="#" id="wide" style="border-bottom: 0; margin-right: .5em;" title="${dotclear.msg.wideEditHide}"> </a>`
