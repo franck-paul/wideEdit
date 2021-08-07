@@ -1,7 +1,7 @@
-/*global $, dotclear, mergeDeep, getData */
+/*global $, dotclear */
 'use strict';
 
-const toWide = function() {
+const toWide = function () {
   $('#entry-sidebar').css('display', 'none');
 
   $('#wide').empty();
@@ -9,7 +9,7 @@ const toWide = function() {
   $('#wide').attr('title', dotclear.msg.wideEditShow);
 };
 
-const toNormal = function() {
+const toNormal = function () {
   $('#entry-sidebar').css('display', 'flex');
 
   $('#wide').empty();
@@ -17,7 +17,7 @@ const toNormal = function() {
   $('#wide').attr('title', dotclear.msg.wideEditHide);
 };
 
-const wideSwitch = function() {
+const wideSwitch = function () {
   if (this.wide == true) {
     toNormal();
     this.wide = false;
@@ -25,13 +25,12 @@ const wideSwitch = function() {
     toWide();
     this.wide = true;
   }
-  $.cookie('wideEdit', this.wide ? 'true' : 'false');
+  localStorage.setItem('wideEdit', this.wide ? '1' : '0');
   return false;
 };
 
-$(document).ready(function() {
-
-  mergeDeep(dotclear, getData('wide_edit'));
+$(document).ready(function () {
+  dotclear.mergeDeep(dotclear, dotclear.getData('wide_edit'));
 
   $('#entry-wrapper').css('width', 'auto');
 
@@ -39,13 +38,11 @@ $(document).ready(function() {
     `<a href="#" id="wide" style="border-bottom: 0; margin-right: .5em;" title="${dotclear.msg.wideEditHide}"> </a>`
   );
 
-  if ($.cookie('wideEdit') == null) {
-    $.cookie('wideEdit', 'false', {
-      expires: 30
-    });
+  if (localStorage.getItem('wideEdit') === null) {
+    localStorage.setItem('wideEdit', '0');
   }
 
-  if ($.cookie('wideEdit') == 'true') {
+  if (localStorage.getItem('wideEdit') === '1') {
     $('#wide').wide = true;
     toWide();
   } else {

@@ -13,22 +13,23 @@
  *
  * Icon from Faenza set by tiheum (http://tiheum.deviantart.com/art/Faenza-Icons-173323228)
  */
+if (!defined('DC_CONTEXT_ADMIN')) {
+    return;
+}
 
-if (!defined('DC_CONTEXT_ADMIN')) { return; }
-
-$new_version = $core->plugins->moduleInfo('wideEdit','version');
+$new_version = $core->plugins->moduleInfo('wideEdit', 'version');
 $old_version = $core->getVersion('wideEdit');
 
-if (version_compare($old_version,$new_version,'>=')) return;
-
-try
-{
-	$core->setVersion('wideEdit',$new_version);
-
-	return true;
+if (version_compare($old_version, $new_version, '>=')) {
+    return;
 }
-catch (Exception $e)
-{
-	$core->error->add($e->getMessage());
+
+try {
+    $core->setVersion('wideEdit', $new_version);
+
+    return true;
+} catch (Exception $e) {
+    $core->error->add($e->getMessage());
 }
+
 return false;
