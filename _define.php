@@ -27,7 +27,9 @@ $this->registerModule(
         'permissions' => 'usage,contentadmin',                      // Permissions
         'type'        => 'plugin',                                  // Type
         'priority'    => 10,                                        // Priority
-        'details'     => 'https://open-time.net/?q=wideEdit',       // Details URL
-        'support'     => 'https://github.com/franck-paul/wideEdit'  // Support URL
+
+        'details'    => 'https://open-time.net/?q=wideEdit',       // Details URL
+        'support'    => 'https://github.com/franck-paul/wideEdit', // Support URL
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/main/dcstore.xml'
     ]
 );
