@@ -20,23 +20,21 @@ if (!defined('DC_CONTEXT_ADMIN')) {
 // dead but useful code, in order to have translations
 __('wideEdit') . __('Collapse/Expand post\'s attributes sidebar');
 
-$core->addBehavior('adminPostHeaders', ['wideEditBehaviors', 'jsLoad']);
-$core->addBehavior('adminPageHeaders', ['wideEditBehaviors', 'jsLoad']);
-$core->addBehavior('adminRelatedHeaders', ['wideEditBehaviors', 'jsLoad']);
+dcCore::app()->addBehavior('adminPostHeaders', ['wideEditBehaviors', 'jsLoad']);
+dcCore::app()->addBehavior('adminPageHeaders', ['wideEditBehaviors', 'jsLoad']);
+dcCore::app()->addBehavior('adminRelatedHeaders', ['wideEditBehaviors', 'jsLoad']);
 
 class wideEditBehaviors
 {
     public static function jsLoad()
     {
-        global $core;
-
         return
         dcPage::jsJson('wide_edit', [
             'msg' => [
                 'wideEditShow' => __('Show Options'),
-                'wideEditHide' => __('Hide Options')
-            ]
+                'wideEditHide' => __('Hide Options'),
+            ],
         ]) .
-        dcPage::jsLoad(urldecode(dcPage::getPF('wideEdit/js/post.js')), $core->getVersion('wideEdit'));
+        dcPage::jsModuleLoad('wideEdit/js/post.js', dcCore::app()->getVersion('wideEdit'));
     }
 }

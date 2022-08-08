@@ -21,15 +21,15 @@ $this->registerModule(
     'wideEdit',                                  // Name
     "Collapse/Expand post's attributes sidebar", // Description
     'Franck Paul & Alain Vagner',                // Author
-    '0.7',                                       // Version
+    '0.8',                                       // Version
     [
-        'requires'    => [['core', '2.19']],                        // Dependencies
+        'requires'    => [['core', '2.23']],                        // Dependencies
         'permissions' => 'usage,contentadmin',                      // Permissions
         'type'        => 'plugin',                                  // Type
         'priority'    => 10,                                        // Priority
 
         'details'    => 'https://open-time.net/?q=wideEdit',       // Details URL
         'support'    => 'https://github.com/franck-paul/wideEdit', // Support URL
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/master/dcstore.xml'
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/master/dcstore.xml',
     ]
 );
