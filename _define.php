@@ -18,18 +18,21 @@ if (!defined('DC_RC_PATH')) {
 }
 
 $this->registerModule(
-    'wideEdit',                                  // Name
-    "Collapse/Expand post's attributes sidebar", // Description
-    'Franck Paul & Alain Vagner',                // Author
-    '0.8',                                       // Version
+    'wideEdit',
+    "Collapse/Expand post's attributes sidebar",
+    'Franck Paul & Alain Vagner',
+    '1.0',
     [
-        'requires'    => [['core', '2.23']],                        // Dependencies
-        'permissions' => 'usage,contentadmin',                      // Permissions
-        'type'        => 'plugin',                                  // Type
-        'priority'    => 10,                                        // Priority
+        'requires'    => [['core', '2.24']],
+        'permissions' => dcCore::app()->auth->makePermissions([
+            dcAuth::PERMISSION_USAGE,
+            dcAuth::PERMISSION_CONTENT_ADMIN,
+        ]),
+        'type'     => 'plugin',
+        'priority' => 10,
 
-        'details'    => 'https://open-time.net/?q=wideEdit',       // Details URL
-        'support'    => 'https://github.com/franck-paul/wideEdit', // Support URL
+        'details'    => 'https://open-time.net/?q=wideEdit',
+        'support'    => 'https://github.com/franck-paul/wideEdit',
         'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/master/dcstore.xml',
     ]
 );
