@@ -35,6 +35,8 @@ class wideEditBehaviors
     }
 }
 
-dcCore::app()->addBehavior('adminPostHeaders', [wideEditBehaviors::class, 'jsLoad']);
-dcCore::app()->addBehavior('adminPageHeaders', [wideEditBehaviors::class, 'jsLoad']);
-dcCore::app()->addBehavior('adminRelatedHeaders', [wideEditBehaviors::class, 'jsLoad']);
+dcCore::app()->addBehaviors([
+    'adminPostHeaders'    => [wideEditBehaviors::class, 'jsLoad'],
+    'adminPageHeaders'    => [wideEditBehaviors::class, 'jsLoad'],
+    'adminRelatedHeaders' => [wideEditBehaviors::class, 'jsLoad'],
+]);

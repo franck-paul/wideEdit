@@ -13,10 +13,6 @@
  *
  * Icon from Faenza set by tiheum (http://tiheum.deviantart.com/art/Faenza-Icons-173323228)
  */
-if (!defined('DC_RC_PATH')) {
-    return;
-}
-
 $this->registerModule(
     'wideEdit',
     "Collapse/Expand post's attributes sidebar",
@@ -28,11 +24,11 @@ $this->registerModule(
             dcAuth::PERMISSION_USAGE,
             dcAuth::PERMISSION_CONTENT_ADMIN,
         ]),
-        'type'     => 'plugin',
-        'priority' => 10,
+        'type'        => 'plugin',
+        'priority'    => 10,
 
-        'details'    => 'https://open-time.net/?q=wideEdit',
-        'support'    => 'https://github.com/franck-paul/wideEdit',
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/master/dcstore.xml',
+        'details'     => 'https://open-time.net/?q=wideEdit',
+        'support'     => 'https://github.com/franck-paul/wideEdit',
+        'repository'  => 'https://raw.githubusercontent.com/franck-paul/wideEdit/master/dcstore.xml',
     ]
 );
