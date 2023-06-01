@@ -1,10 +1,10 @@
 <modules xmlns:da="http://dotaddict.org/da/">
   <module id="wideEdit">
     <name>wideEdit</name>
-    <version>1.0</version>
+    <version>2.0</version>
     <author>Franck Paul &amp; Alain Vagner</author>
     <desc>Collapse/Expand post&apos;s attributes sidebar</desc>
-    <file>https://github.com/franck-paul/wideEdit/releases/download/1.0/plugin-wideEdit-1.0.zip</file>
+    <file>https://github.com/franck-paul/wideEdit/releases/download/2.0/plugin-wideEdit-2.0.zip</file>
     <da:dcmin>2.24</da:dcmin>
     <da:details>https://open-time.net/?q=wideEdit</da:details>
     <da:support>https://github.com/franck-paul/wideEdit</da:support>
