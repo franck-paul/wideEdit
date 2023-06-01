@@ -17,18 +17,18 @@ $this->registerModule(
     'wideEdit',
     "Collapse/Expand post's attributes sidebar",
     'Franck Paul & Alain Vagner',
-    '1.0',
+    '2.0',
     [
         'requires'    => [['core', '2.24']],
         'permissions' => dcCore::app()->auth->makePermissions([
             dcAuth::PERMISSION_USAGE,
             dcAuth::PERMISSION_CONTENT_ADMIN,
         ]),
-        'type'        => 'plugin',
-        'priority'    => 10,
+        'type'     => 'plugin',
+        'priority' => 10,
 
-        'details'     => 'https://open-time.net/?q=wideEdit',
-        'support'     => 'https://github.com/franck-paul/wideEdit',
-        'repository'  => 'https://raw.githubusercontent.com/franck-paul/wideEdit/master/dcstore.xml',
+        'details'    => 'https://open-time.net/?q=wideEdit',
+        'support'    => 'https://github.com/franck-paul/wideEdit',
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/master/dcstore.xml',
     ]
 );
