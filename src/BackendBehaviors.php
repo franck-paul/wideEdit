@@ -14,20 +14,19 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\wideEdit;
 
-use dcCore;
-use dcPage;
+use Dotclear\Core\Backend\Page;
 
 class BackendBehaviors
 {
     public static function jsLoad()
     {
         return
-        dcPage::jsJson('wide_edit', [
+        Page::jsJson('wide_edit', [
             'msg' => [
                 'wideEditShow' => __('Show Options'),
                 'wideEditHide' => __('Hide Options'),
             ],
         ]) .
-        dcPage::jsModuleLoad(My::id() . '/js/post.js', dcCore::app()->getVersion(My::id()));
+        My::jsLoad('post.js');
     }
 }

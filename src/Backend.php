@@ -15,31 +15,28 @@ declare(strict_types=1);
 namespace Dotclear\Plugin\wideEdit;
 
 use dcCore;
-use dcNsProcess;
+use Dotclear\Core\Process;
 
-class Backend extends dcNsProcess
+class Backend extends Process
 {
-    protected static $init = false; /** @deprecated since 2.27 */
     public static function init(): bool
     {
-        static::$init = My::checkContext(My::BACKEND);
-
         // dead but useful code, in order to have translations
         __('wideEdit') . __('Collapse/Expand post\'s attributes sidebar');
 
-        return static::$init;
+        return self::status(My::checkContext(My::BACKEND));
     }
 
     public static function process(): bool
     {
-        if (!static::$init) {
+        if (!self::status()) {
             return false;
         }
 
         dcCore::app()->addBehaviors([
-            'adminPostHeaders'    => [BackendBehaviors::class, 'jsLoad'],
-            'adminPageHeaders'    => [BackendBehaviors::class, 'jsLoad'],
-            'adminRelatedHeaders' => [BackendBehaviors::class, 'jsLoad'],
+            'adminPostHeaders'    => BackendBehaviors::jsLoad(...),
+            'adminPageHeaders'    => BackendBehaviors::jsLoad(...),
+            'adminRelatedHeaders' => BackendBehaviors::jsLoad(...),
         ]);
 
         return true;
