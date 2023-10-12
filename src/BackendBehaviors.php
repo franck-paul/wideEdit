@@ -18,7 +18,7 @@ use Dotclear\Core\Backend\Page;
 
 class BackendBehaviors
 {
-    public static function jsLoad()
+    public static function jsLoad(): string
     {
         return
         Page::jsJson('wide_edit', [
