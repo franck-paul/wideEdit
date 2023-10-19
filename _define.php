@@ -19,7 +19,7 @@ $this->registerModule(
     'Franck Paul & Alain Vagner',
     '3.0',
     [
-        'requires'    => [['core', '2.24']],
+        'requires'    => [['core', '2.28']],
         'permissions' => dcCore::app()->auth->makePermissions([
             dcAuth::PERMISSION_USAGE,
             dcAuth::PERMISSION_CONTENT_ADMIN,
