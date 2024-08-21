@@ -26,6 +26,6 @@ $this->registerModule(
 
         'details'    => 'https://open-time.net/?q=wideEdit',
         'support'    => 'https://github.com/franck-paul/wideEdit',
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/master/dcstore.xml',
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/main/dcstore.xml',
     ]
 );

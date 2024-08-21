@@ -37,7 +37,7 @@ $(() => {
     $('#wide').append(
       `<img style="width: 1.5em;" src="images/${wide ? 'expand' : 'hide'}.svg" alt="${
         wide ? dotclear.msg.wideEditShow : dotclear.msg.wideEditHide
-      }" />`,
+      }">`,
     );
     $('#wide').attr('title', wide ? dotclear.msg.wideEditShow : dotclear.msg.wideEditHide);
 
