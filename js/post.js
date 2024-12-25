@@ -1,7 +1,7 @@
 /*global $, dotclear */
 'use strict';
 
-$(() => {
+dotclear.ready(() => {
   dotclear.mergeDeep(dotclear, dotclear.getData('wide_edit'));
 
   const WIDE_EDIT_SHOW = '0'; // Options are displayed
