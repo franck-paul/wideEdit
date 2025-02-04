@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @brief wideEdit, a plugin for Dotclear 2
  *
@@ -19,6 +20,7 @@ $this->registerModule(
     'Franck Paul & Alain Vagner',
     '4.2',
     [
+        'date'        => '2003-08-13T13:42:00+0100',
         'requires'    => [['core', '2.28']],
         'permissions' => 'My',
         'type'        => 'plugin',
