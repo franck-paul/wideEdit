@@ -21,7 +21,7 @@ $this->registerModule(
     '4.3',
     [
         'date'        => '2025-02-09T17:26:26+0100',
-        'requires'    => [['core', '2.28']],
+        'requires'    => [['core', '2.36']],
         'permissions' => 'My',
         'type'        => 'plugin',
         'priority'    => 10,
@@ -29,5 +29,6 @@ $this->registerModule(
         'details'    => 'https://open-time.net/?q=wideEdit',
         'support'    => 'https://github.com/franck-paul/wideEdit',
         'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/main/dcstore.xml',
+        'license'    => 'gpl2',
     ]
 );
