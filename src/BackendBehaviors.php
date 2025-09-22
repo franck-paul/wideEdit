@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @brief wideEdit, a plugin for Dotclear 2
  *
@@ -14,14 +15,14 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\wideEdit;
 
-use Dotclear\Core\Backend\Page;
+use Dotclear\App;
 
 class BackendBehaviors
 {
     public static function jsLoad(): string
     {
         return
-        Page::jsJson('wide_edit', [
+        App::backend()->page()->jsJson('wide_edit', [
             'msg' => [
                 'wideEditShow' => __('Show Options'),
                 'wideEditHide' => __('Hide Options'),
