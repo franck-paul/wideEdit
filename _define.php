@@ -18,9 +18,9 @@ $this->registerModule(
     'wideEdit',
     'Collapse/Expand posts attributes sidebar',
     'Franck Paul & Alain Vagner',
-    '5.0',
+    '5.1',
     [
-        'date'        => '2025-09-07T15:41:05+0200',
+        'date'        => '2025-09-22T10:22:04+0200',
         'requires'    => [['core', '2.36']],
         'permissions' => 'My',
         'type'        => 'plugin',
