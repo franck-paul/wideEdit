@@ -14,21 +14,25 @@
  *
  * Icon from Faenza set by tiheum (http://tiheum.deviantart.com/art/Faenza-Icons-173323228)
  */
-$this->registerModule(
-    'wideEdit',
-    'Collapse/Expand posts attributes sidebar',
-    'Franck Paul & Alain Vagner',
-    '5.2',
-    [
-        'date'        => '2026-08-03T10:16:32+0200',
-        'requires'    => [['core', '2.36']],
-        'permissions' => 'My',
-        'type'        => 'plugin',
-        'priority'    => 10,
+declare(strict_types=1);
 
-        'details'    => 'https://open-time.net/?q=wideEdit',
-        'support'    => 'https://github.com/franck-paul/wideEdit',
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/main/dcstore.xml',
-        'license'    => 'gpl2',
-    ]
-);
+if (isset($this) && is_object($this) && method_exists($this, 'registerModule') && isset($this->id) && is_string($this->id)) {
+    $this->registerModule(
+        'wideEdit',
+        'Collapse/Expand posts attributes sidebar',
+        'Franck Paul & Alain Vagner',
+        '5.2',
+        [
+            'date'        => '2026-08-03T10:16:32+0200',
+            'requires'    => [['core', '2.36']],
+            'permissions' => 'My',
+            'type'        => 'plugin',
+            'priority'    => 10,
+
+            'details'    => 'https://open-time.net/?q=wideEdit',
+            'support'    => 'https://github.com/franck-paul/wideEdit',
+            'repository' => 'https://raw.githubusercontent.com/franck-paul/wideEdit/main/dcstore.xml',
+            'license'    => 'gpl2',
+        ]
+    );
+}
