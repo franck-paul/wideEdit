@@ -47,16 +47,16 @@ dotclear.ready(() => {
   button.setAttribute('href', '#');
   button.setAttribute('id', 'wide');
   button.setAttribute('title', '');
-  button.style.borderBottom = '0';
+  button.style.borderBlockEnd = '0';
   button.style.position = 'absolute';
-  button.style.top = '.5em';
-  button.style.right = '.8em';
-  button.style.width = '1.5em';
-  button.style.height = '1.5em';
+  button.style.insetBlockStart = '.5em';
+  button.style.insetInlineEnd = '.8em';
+  button.style.inlineSize = '1.5em';
+  button.style.blockSize = '1.5em';
 
   // Add image inside button
   const image = document.createElement('img');
-  image.style.width = '1.5em';
+  image.style.inlineWidth = '1.5em';
   image.setAttribute('src', 'images/hide.svg');
   image.setAttribute('alt', dotclear.msg.wideEditHide);
   button.append(image);
