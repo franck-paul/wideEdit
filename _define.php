@@ -21,9 +21,9 @@ if (isset($this) && is_object($this) && method_exists($this, 'registerModule') &
         'wideEdit',
         'Collapse/Expand posts attributes sidebar',
         'Franck Paul & Alain Vagner',
-        '5.2',
+        '5.3',
         [
-            'date'        => '2026-08-03T10:16:32+0200',
+            'date'        => '2026-11-07T17:09:48+0100',
             'requires'    => [['core', '2.36']],
             'permissions' => 'My',
             'type'        => 'plugin',
